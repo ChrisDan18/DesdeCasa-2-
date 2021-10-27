@@ -1,0 +1,325 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+
+}
+
+
+
+body{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color:rgba(0, 167, 245, 0.1);
+}
+
+.header{
+    width: 100%;
+    height: 95px;
+    background-color: #5bcaf7;
+    position: relative;
+    
+
+}
+
+#buscador{
+    margin-top: -45px;
+    position: relative;
+    bottom: 600px;
+    left: 15%;
+    
+    
+}
+
+#input2{
+    
+		
+        background: transparent;
+        font-weight: bold;
+        background-image: url(https://image.flaticon.com/icons/png/512/116/116836.png);
+        background-size: 16px;
+        background-position: 5px;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 700px;
+        display: flex;
+        padding: 9px 22px 9px 26px;
+        border: 2px solid rgb(49, 49, 43);
+        height: 45px;
+        top: -20px;
+        background-color: white;
+        
+    
+    
+    }
+
+    #input2::placeholder { 
+        color: black;
+        opacity: 1; 
+      }
+
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    
+}
+
+.logo{
+    text-align: left;
+    line-height: 5px;
+}
+
+.menu{
+    position: relative;
+    margin-left: 1000px;
+    line-height: 85px;
+
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+
+}
+
+.menu a{
+    display: flex;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.menu a:hover{
+    background:#3b5998;
+    color: white;
+}
+
+.menu .submenu{
+    background: white;
+    box-shadow: 3px 10px 10px rgba(0,0,0,0.2);
+    display: none;
+}
+
+.menu .submenu li a{
+    line-height: 50px;
+
+
+}
+
+.menu ul li a:hover + ul, .menu .submenu:hover{
+    display: block;
+}
+
+
+  
+
+#SubirF{
+    border: 2px solid white;
+    width: 30%;
+    height: 370px;
+    margin-left: 17%;
+    margin-top: 10%;
+    text-align: center;
+    background-color:#5bcaf7;
+    border-radius: 10px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+
+}
+
+#titulo{
+    text-align: center;
+    bottom: -90px;
+    position: relative;
+}
+
+#NombreSe{
+    border: 2px solid white;
+    width: 30%;
+    height: 100px;
+    margin-left: 50%;
+    margin-top: -23.1%;
+    text-align: center;
+    background-color: #5bcaf7;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    
+  
+}
+
+#Precio{
+    border: 2px solid white;
+    width: 30%;
+    height: 100px;
+    margin-left: 50%;
+    margin-top: 1%;
+    text-align: center;
+    background-color: #5bcaf7;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+
+}
+
+#Caracteristicas{
+    border: 2px solid white;
+    width: 30%;
+    height: 138px;
+    margin-left: 50%;
+    margin-top: 1%;
+    text-align: center;
+    background-color: #5bcaf7;
+    border-radius: 20px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+
+
+}
+
+.guardar{
+    position: relative;
+    margin-top: 15px;
+    margin-left: 60%;
+    height: 50px;
+    width: 10%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    background-color: #5bcaf7;
+}
+
+#caracteristicas{
+    width: 90.5%;
+    margin-top: 15px;
+    height: 111px;
+    border-radius: 10px;
+    border-color: #3b5998;
+    background-color:rgba(255, 255, 255, 0.342);
+    font-size: 20px;
+    border: none;
+    left: 20px;
+}
+
+
+.guardar:hover {
+    background-color: #fffb00d7;
+    color: rgb(0, 0, 0);
+
+}
+
+
+#NombreSer{
+    width: 90%;
+    margin-top: 15px;
+    height: 70px;
+    border-radius: 10px;
+    border-color: rgba(101, 203, 243, 0.11);
+    background-color: rgba(255, 255, 255, 0.342);
+    font-size: 20px;
+    left: 20px;
+    
+    
+}
+
+#PrecioD{
+    width: 90%;
+    margin-top: 15px;
+    height: 70px;
+    border-radius: 10px;
+    border-color: rgba(101, 203, 243, 0.11);
+    background-color: rgba(255, 255, 255, 0.342);
+    font-size: 20px;
+    left: 20px;
+    
+    
+}
+
+::placeholder { 
+    color: black;
+    opacity: 1; 
+  }
+
+ .logo1 img{
+    bottom: 687px;
+    position: relative;
+    left: 3%;
+    width: 110px;
+}
+
+
+  
+#SubirF input{
+    display: none;
+
+
+}
+
+.subir{
+    position: relative;
+    left: -270px;
+    font-size: 150%;
+}
+
+#img_preview{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+
+}
+
+#fotos{
+    width: 100%;
+    height: 95%;
+}
+
+.foto{
+    width: 30%;
+    float: left;
+    position: relative;
+    margin-left: 15px;
+}
+
+#btnborrarfotos{
+    position: relative;
+    margin-top: 15px;
+    margin-left: 60%;
+    height: 50px;
+    width: 30%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    background-color: #5bcaf7;
+    top: auto;
+    bottom: 2px;
+}
+
+#btnborrarfotos:hover {
+    background-color: #fffb00d7;
+    color: rgb(0, 0, 0);
+
+}
+
+#logo_1{
+    bottom: -3px;
+    left: 3%;
+    width: 110px;
+    position: relative;
+
+}
+
+#file3{
+    width: 480px;
+    height: 370px;
+    position: relative;
+    top: -1px;
+    left: 0px;
+    float: left;
+    cursor: pointer;
+}

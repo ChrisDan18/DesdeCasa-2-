@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar producto</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    
+    <div id="encabezado" class="header">
+        <div class="logo1">
+            <img id="logo_1" src="logo1.png" alt="">
+
+        </div>
+       
+       
+        <div class="nav menu">
+            <ul>
+                <li><a href="../Pagina_principal/index2.html">Inicio</a></li>
+                <li><a href="../registrarse/">Registrate</a></li>
+                <li><a href="#">Perfil</a>
+                <li><a href="#">Cerrar sesión</a></li>
+                    <ul class="submenu">
+                        <li><a href="#">Compras</a></li>
+                        <li><a href="#">Ventas</a></li>
+                        
+                    </ul>
+                </li>
+                
+            </ul>
+
+        </div>
+    </div>
+
+    
+
+
+<section>
+            <div id="buscador">
+                <form autocomplete="off">
+                <input id="input2" type="text" name="q" placeholder="Buscar"></form>
+            </div>
+        </section>
+
+
+
+
+    
+    <section>
+        
+        <div id="SubirF">
+
+
+            <div id="btnpublicarfoto">
+                <label id="labelpublicar" for="input_publicar">
+                    <img id="file3" src="publicar30.png" alt="">
+                </label>
+                
+                <input type="file" id="input_publicar" name="input_publicar" multiple>
+
+                <div id="img_preview">
+                    <div id="fotos"></div>
+                </div>
+                
+            </div>
+
+            <button id="btnborrarfotos">Borrar fotos</button>
+            
+
+        </div>
+
+        <div id="NombreP">
+
+            <form autocomplete="off">
+                <input id="NombrePro" type="text" name="q" placeholder="Nombre de producto">
+            </form>
+
+        </div>
+
+        <div id="Precio">
+
+            <form autocomplete="off">
+                <input id="PrecioD" type="text" name="q" placeholder="Precio del producto">
+            </form>
+
+        </div>
+
+        <div id="Caracteristicas">
+
+            <form autocomplete="off">
+                <input id="caracteristicas" type="text" name="q" placeholder="Añade caracteristicas">
+            </form>
+
+        </div>
+
+
+        <input type="submit" class="guardar" value="Publicar">                                                                                                                                                                          
+        
+
+       
+
+
+
+
+    </section>
+    <script src="funciones.js"></script>
+</body>
+</html>

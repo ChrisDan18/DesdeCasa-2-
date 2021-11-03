@@ -1,7 +1,7 @@
 <?php
 
     /* Zona de Ejecución */
-    $info = new Respuesta;
+    /*$info = new Respuesta;
     $info->estado = "";
     $info->datos= "";
 
@@ -29,7 +29,7 @@
 
     $json = TransformarEnJSON($info);
     MostrarJSON($json);
-
+    */
 
     /** */
     class Respuesta{
@@ -67,7 +67,7 @@
         $servidor="localhost";
         $usuario="alumno";
         $password="alumno";
-        $bdd="libreria";
+        $bdd="desdecasa";
     
         $basededatos = new BaseDeDatos;
     

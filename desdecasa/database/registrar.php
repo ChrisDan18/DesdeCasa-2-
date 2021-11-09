@@ -2,8 +2,20 @@
 
 include "api.php";
 
+
+   /* $nombre_u = ValidarDatos($_POST['nombre_u']);
+    $correo_e = ValidarDatos($_POST['correo_e']);
+    $contraseña = ValidarDatos($_POST['contraseña']);
+    $nombre_p = ValidarDatos($_POST['nombre_p']);
+    $apellido = ValidarDatos($_POST['apellido']);
+    $ci = ValidarDatos($_POST['ci']);
+    $domicilio = ValidarDatos($_POST['domicilio']);
+    $telefono = ValidarDatos($_POST['telefono']);
+
+    echo ("$nombre_u,$correo_e,$contraseña,$nombre_p,$apellido,$ci,$domicilio,$telefono");*/
+
 /* Zona de Ejecución */
-    $info = new Respuesta;
+   $info = new Respuesta;
     $info->estado = "";
     $info->datos= "";
 
@@ -20,8 +32,7 @@ include "api.php";
                     break;
                 //Modo 2: Buscar libros
                 case '2':
-                    $datoBusqueda = ValidarDatos($_POST['busqueda']);
-                    $info = BuscarLibros($datoBusqueda);
+                    $info = registrar_usuario();
                     break;
                 default:
                     # code...
@@ -40,6 +51,7 @@ MostrarJSON($JSON);*/
 
 
 function registrar_usuario(){
+    
     $respuesta = new Respuesta;
     $nombre_u = ValidarDatos($_POST['nombre_u']);
     $correo_e = ValidarDatos($_POST['correo_e']);
@@ -50,29 +62,37 @@ function registrar_usuario(){
     $domicilio = ValidarDatos($_POST['domicilio']);
     $telefono = ValidarDatos($_POST['telefono']);
     
+    //echo ("$nombre_u,$correo_e,$contraseña,$nombre_p,$apellido,$ci,$domicilio,$telefono");
 
     $bdd = CrearConexion();
-    $consulta1 = "Insert into usuario(nombre,contraseña) values (?,?)";
+    $consulta1 = "Insert into usuario(nombre,contraseña,correo_e) values (?,?,?)";
     $consulta2 = "Insert into datospersonales(nombre,apellido,ci,domicilio,telefono) values (?,?,?,?,?)";
     $consulta3 = "Insert into tiene(usuario_nombre,datospersonales_ci) values (?,?)";
 
+    
 
     $sentencia = $bdd->conexion->prepare($consulta1);
-        $sentencia->bind_param("ss",$nombre_u,$contraseña);
+        $sentencia->bind_param("sss",$nombre_u,$contraseña,$correo_e);
         $sentencia->execute();
-        $datos = $sentencia->affected_rows();
+       $datos = $sentencia->affected_rows;
+       $bdd->conexion->close();
+       
         
         if ($datos==1) {
+            $bdd = CrearConexion();
             $sentencia = $bdd->conexion->prepare($consulta2);
-            $sentencia->bind_param("ssisi",$nombre,$apellido,$ci,$domicilio,$telefono);
+            $sentencia->bind_param("ssisi",$nombre_p,$apellido,$ci,$domicilio,$telefono);
             $sentencia->execute();
-            $datos = $sentencia->affected_rows();
+            
+            $datos = $sentencia->affected_rows;
+            $bdd->conexion->close();
         
             if ($datos==1) {
+                $bdd = CrearConexion();
                 $sentencia = $bdd->conexion->prepare($consulta3);
-                $sentencia->bind_param("ss",$usuario_nombre,$ci);
+                $sentencia->bind_param("ss",$nombre_u,$ci);
                 $sentencia->execute();
-                $datos = $sentencia->affected_rows();
+                $datos = $sentencia->affected_rows;
 
                 if ($datos==1) {
                     $respuesta->estado="OK";
@@ -81,7 +101,9 @@ function registrar_usuario(){
             }
         } else {
             $respuesta->estado="ERROR";
-            $respuesta->datos="Ocurrió un error";
+            $respuesta->datos=array();
+            array_push($respuesta->datos,"Ocurrió un error");
+            array_push($respuesta->datos,error_get_last()['message']);
         }
     $bdd->conexion->close();
     return $respuesta;

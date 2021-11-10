@@ -13,7 +13,7 @@
             <ul>
                 <li><a href="../Pagina_principal/index2.html">Inicio</a></li>
                 <li><a href="../registrarse/">Registrate</a></li>
-                <li><a href="#">Perfil</a>
+                <li><a href="../perfil/index.html">Perfil</a>
                 <li><a href="#">Cerrar sesión</a></li>
                     <ul class="submenu">
                         <li><a href="#">Compras</a></li>
@@ -25,9 +25,15 @@
             </ul>
 
         </div>
+
+
+
+
     </div>
     <div id="contenido">
-        <div id="logo"><img src="logo1.png" alt=""></div>
+        <div id="logo">
+            <a href="../Pagina_principal/index2.html"><img src="logo1.png" alt=""></a>
+        </div>
         <div id="formlogin">
             
         </div>
@@ -36,11 +42,26 @@
 
     <section>
         <div id="buscador">
-            <form autocomplete="off">
+            <form autocomplete="on">
             <input id="input2" type="text" name="q" placeholder="Buscar"></form>
         </div>
     </section>
-    <div id="foto_P"> <p> foto perfil</p> </div>
+    <div id="foto_P"> 
+    
+        <div id="btnpublicarfoto">
+            <label id="labelpublicar" for="input_publicar">
+                <img id="file3" src="publicar30.png" alt="">
+            </label>
+
+            <input type="file" id="input_publicar" name="input_publicar" multiple>
+
+            <div id="img_preview">
+                <div id="fotos"></div>
+                
+            </div>
+        </div>
+    
+    </div>
 
     <div id="nombre_U"> 
 
@@ -54,13 +75,17 @@
         
         <input type="text" name="Nombre personal" id="nombre_p" placeholder="Nombre personal">
 
-        <input type="tel" name="Numero de contacto" id="tel" placeholder="Numero de contacto">
+        <input type="tel" name="Numero de contacto" id="tel" placeholder="Nùmero de contacto">
 
         <input type="text" name="Correo" id="correo" placeholder="E-mail">
 
-        <input type="text" name="Descripcion" id="descripcion_p" placeholder="Descrripcion personal" >
+         <input type="text" name="Direcciòn" id="direccion" placeholder="Direcciòn">
+
+        <input type="text" name="Descripcion" id="descripcion_p" placeholder="Descripciòn personal" >
     </div>
 
 
 </body>
 </html>
+
+<script src="funciones.js"></script>

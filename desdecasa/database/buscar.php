@@ -45,6 +45,62 @@ class Datos_U{
 
 }
 
+function Datos_perfil($ci){
+    $respuesta = new Respuesta;
+    $bdd = CrearConexion();
+    $consulta = "
+    select 
+    usuario.nombre,usuario.correo_e,usuario.foto_id,
+    datospersonales.nombre,datospersonales.apellido,datospersonales.domicilio,datospersonales.telefono
+    from 
+    usuario inner join tiene inner join datospersonales 
+    where 
+    usuario.nombre=tiene.usuario_nombre and datospersonales.ci=tiene.datospersonales_ci
+    and
+    datospersonales.ci=?";
+
+    $sentencia = $bdd->conexion->prepare($consulta);
+        $sentencia->bind_param("s",$ci);
+       $sentencia->execute();
+        $datos = $sentencia->get_result();;
+    
+        if ($datos->num_rows > 0) {
+            # code...
+        }
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        $fila=$datos->fetch_assoc();
+        
+        if ($fila['conteo']==1) {
+            $respuesta->estado="OK";
+            $respuesta->datos=array ();
+            array_push($respuesta->datos,true);
+            array_push($respuesta->datos,"Este usuario ya està registrado");
+        }
+        else {
+            $respuesta->estado="OK";
+            $respuesta->datos=array ();
+            array_push($respuesta->datos,false);
+            array_push($respuesta->datos,"Este usuario està disponible");
+        }
+    
+    $bdd->conexion->close();
+    return $respuesta;
+
+}
+
+    
+
+
+
+
 
 
 

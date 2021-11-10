@@ -105,6 +105,7 @@ function enviar_datos_u(){
             success:function (data) {
                 console.log(data);
                 alert ("El usuario se registró con éxito");
+                window.location.replace('../perfil/?ci='+ci);
             },
             //6 - Establecemos una función que se ejecuta en caso de error
             error:function(errorThrown){

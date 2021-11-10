@@ -29,6 +29,7 @@ include "api.php";
                 case '1':
                     $Usuario = $_POST['nombre_u'];
                     $info = Usuario_Existe($Usuario);
+
                     break;
                 //Modo 2: Buscar libros
                 case '2':

@@ -37,11 +37,14 @@ MostrarJSON($json);
 
 class Datos_U{
     public $ci;
-    public $nombre_p;
-    public $numero_contacto;
-    public $email;
-    public $direccion;
+    public $nombre_u;
     public $descripcion;
+    public $nombre_p;
+    public $correo_e;
+    public $foto_id;
+    public $apellido;
+    public $domicilio;
+    public $telefono;
 
 }
 
@@ -50,8 +53,13 @@ function Datos_perfil($ci){
     $bdd = CrearConexion();
     $consulta = "
     select 
-    usuario.nombre,usuario.correo_e,usuario.foto_id,
-    datospersonales.nombre,datospersonales.apellido,datospersonales.domicilio,datospersonales.telefono
+    usuario.nombre as 'nombre_u',
+    usuario.correo_e as 'correo_e',
+    usuario.foto_id as 'foto_id',
+    datospersonales.nombre as 'nombre_p',
+    datospersonales.apellido as 'apellido',
+    datospersonales.domicilio as 'domicilio',
+    datospersonales.telefono as 'telefono'
     from 
     usuario inner join tiene inner join datospersonales 
     where 
@@ -65,7 +73,19 @@ function Datos_perfil($ci){
         $datos = $sentencia->get_result();;
     
         if ($datos->num_rows > 0) {
-            # code...
+            $respuesta->estado = "OK";
+            $respuesta->datos = array();
+
+            while ( $fila=$datos->fetch_assoc() ) {
+                $Usuario = new Datos_u;
+                $Usuario->ci = $fila['ci'];
+                $Usuario->nombre_p = $fila['nombre_p'];
+                $Usuario->numero_contacto = $fila['numero_contacto'];
+                $Usuario->email = $fila['email'];
+                $Usuario->direccion = $fila['direccion'];
+                $Usuario->descripcion = $fila['descripcion'];
+                array_push($respuesta->datos, $Usuario);
+            }
         }
             
         

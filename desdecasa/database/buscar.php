@@ -38,7 +38,6 @@ MostrarJSON($json);
 class Datos_U{
     public $ci;
     public $nombre_u;
-    public $descripcion;
     public $nombre_p;
     public $correo_e;
     public $foto_id;
@@ -53,6 +52,7 @@ function Datos_perfil($ci){
     $bdd = CrearConexion();
     $consulta = "
     select 
+    datospersonales.ci as 'ci',
     usuario.nombre as 'nombre_u',
     usuario.correo_e as 'correo_e',
     usuario.foto_id as 'foto_id',
@@ -79,72 +79,24 @@ function Datos_perfil($ci){
             while ( $fila=$datos->fetch_assoc() ) {
                 $Usuario = new Datos_u;
                 $Usuario->ci = $fila['ci'];
+                $Usuario->nombre_u = $fila['nombre_u'];
+                $Usuario->apellido = $fila['apellido'];
+                $Usuario->foto_id = $fila['foto_id'];
                 $Usuario->nombre_p = $fila['nombre_p'];
-                $Usuario->numero_contacto = $fila['numero_contacto'];
-                $Usuario->email = $fila['email'];
-                $Usuario->direccion = $fila['direccion'];
-                $Usuario->descripcion = $fila['descripcion'];
+                $Usuario->telefono = $fila['telefono'];
+                $Usuario->correo_e = $fila['correo_e'];
+                $Usuario->domicilio = $fila['domicilio'];
+
                 array_push($respuesta->datos, $Usuario);
             }
         }
-            
         
-        
-        
-        
-        
-        
-        
-        
-        $fila=$datos->fetch_assoc();
-        
-        if ($fila['conteo']==1) {
-            $respuesta->estado="OK";
-            $respuesta->datos=array ();
-            array_push($respuesta->datos,true);
-            array_push($respuesta->datos,"Este usuario ya està registrado");
-        }
-        else {
-            $respuesta->estado="OK";
-            $respuesta->datos=array ();
-            array_push($respuesta->datos,false);
-            array_push($respuesta->datos,"Este usuario està disponible");
-        }
-    
     $bdd->conexion->close();
     return $respuesta;
 
 }
 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

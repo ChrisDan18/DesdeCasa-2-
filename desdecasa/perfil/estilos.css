@@ -167,7 +167,7 @@ body{
     position: relative;
     border: solid black 2px;
     width: 20%;
-    height: 5%;
+    height: 6%;
     left: 35%;
     top: -30%;
     border-radius: 5px;
@@ -175,7 +175,7 @@ body{
 
 }
 
-#nombre_usuario{
+#nombre_u{
     position: relative;
     height: 100%;
     width: 100%;
@@ -186,7 +186,7 @@ body{
     position: relative;
     border: solid white;
     width: 30%;
-    height: 35%;
+    height: 40%;
     left: 35%;
     top: -20%;
     background-color: #5bcaf7;
@@ -197,7 +197,7 @@ body{
 
 #nombre_p{
     position: relative;
-    height: 15%;
+    height: 18%;
     width: 98%;
     left: 1%;
     top: 1%;
@@ -205,7 +205,7 @@ body{
 
 #tel{
     position: relative;
-    height: 15%;
+    height: 18%;
     width: 98%;
     left: 1%;
     top: 3%;
@@ -214,21 +214,21 @@ body{
 
 #correo{
     position: relative;
-    height: 15%;
+    height: 17%;
     width: 98%;
     left: 1%;
     top: 5%;
 
 }
 
-#descripcion_p{
+/*#descripcion_p{
     position: relative;
-    height: 25%;
+    height: 23%;
     width: 98%;
     left: 1%;
     top: 9%;
 
-}
+}*/
 
 #editar{
     position: relative;
@@ -240,7 +240,7 @@ body{
 
 #direccion{
     position: relative;
-    height: 15%;
+    height: 18%;
     width: 98%;
     left: 1%;
     top: 7%;
@@ -300,4 +300,13 @@ body{
 
 #foto_P input{
     display: none;
+}
+
+#apellido{
+    position: relative;
+    height: 18%;
+    width: 98%;
+    left: 1%;
+    top: 2%;
+
 }

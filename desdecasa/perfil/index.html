@@ -65,7 +65,7 @@
 
     <div id="nombre_U"> 
 
-        <input type="text" name="nombre usuario" id="nombre_usuario" placeholder="Nombre de usuario">
+        <input type="text" name="nombre usuario" id="nombre_u" placeholder="Nombre de usuario">
 
     </div>
 
@@ -73,19 +73,25 @@
 
     <div id="descripcion">
         
-        <input type="text" name="Nombre personal" id="nombre_p" placeholder="Nombre personal">
+        <input type="text" name="Nombre personal" id="nombre_p" placeholder="Nombre personal" disabled>
 
-        <input type="tel" name="Numero de contacto" id="tel" placeholder="Nùmero de contacto">
+        <input type="text" name="Apellido" id="apellido" placeholder="Apellido" disabled>
 
-        <input type="text" name="Correo" id="correo" placeholder="E-mail">
+        <input type="tel" name="Numero de contacto" id="tel" placeholder="Nùmero de contacto" disabled>
 
-         <input type="text" name="Direcciòn" id="direccion" placeholder="Direcciòn">
+        <input type="text" name="Correo" id="correo" placeholder="E-mail" disabled>
 
-        <input type="text" name="Descripcion" id="descripcion_p" placeholder="Descripciòn personal" >
+         <input type="text" name="Direcciòn" id="direccion" placeholder="Direcciòn" disabled>
+
     </div>
 
 
 </body>
 </html>
 
+
+<script src="../registrarse/jquery-3.6.0.js"></script>
 <script src="funciones.js"></script>
+<script>
+    Datos_perfil();
+</script>

@@ -36,17 +36,19 @@ CREATE TABLE `factura` (
 );
 
 CREATE TABLE `servicio` (
+  nombre_s varchar(30) not null,
   `codigo` int unique not null auto_increment,
   `descripcion` varchar(50) NOT NULL,
-  `zonadecobertura` varchar(20) not null,
+  `zonadecobertura` varchar(20) not null default "...",
   `precio` int not null,
    PRIMARY KEY (`codigo`)
 );
 
-CREATE TABLE `producto` (  
-  codigo int unique not null,
-  marca varchar(10) NOT NULL,
-  modelo varchar(12) not null,
+CREATE TABLE `producto` (
+  nombre_p varchar(30) not null,
+  codigo int unique not null auto_increment,
+  marca varchar(10) NOT NULL default "...",
+  modelo varchar(12) not null default "...",
   caracteristicas varchar(120) not null,
   precio int(8) not null,
   PRIMARY KEY (codigo)

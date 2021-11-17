@@ -12,9 +12,10 @@
         <div class="nav menu">
             <ul>
                 <li><a href="../Pagina_principal/index2.html">Inicio</a></li>
+                <li><a href="../loguin/index.html">Iniciar sesiòn</a>
                 <li><a href="../registrarse/">Registrate</a></li>
                 <li><a href="../perfil/index.html">Perfil</a>
-                <li><a href="#">Cerrar sesión</a></li>
+                    <li><a href="../logout/index.html">Cerrar sesión</a></li>
                     <ul class="submenu">
                         <li><a href="#">Compras</a></li>
                         <li><a href="#">Ventas</a></li>
@@ -50,10 +51,10 @@
  </section>
   
 
-        <div id="NombreSe">
+        <div id="Nombre_ser">
 
             <form autocomplete="off">
-                <input id="NombreSer" type="text" name="q" placeholder="Nombre de Servicio">
+                <input id="Nombre_s" type="text" name="q" placeholder="Nombre de Servicio">
             </form>
 
         </div>
@@ -76,7 +77,8 @@
 
 
 
-        <input type="submit" class="guardar" value="Publicar">
+        <!-- <input type="submit"  value=""> -->
+        <button id="guardar" onclick="ChequearCampos()">Publicar</button>
         
         <section>
             <div id="buscador">
@@ -94,11 +96,14 @@
 
 
 </section>
-    <script src="funciones.js"></script>
+    
     
 </body>
 
-</html>
 
+</html>
+<script src="../registrarse/jquery-3.6.0.js"></script>
+<script src="funciones.js"></script>
+<script src="eventos.js"></script>
 
 

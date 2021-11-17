@@ -72,7 +72,7 @@ body{
 
 }
 
-.guardar{
+#guardar{
     position: relative;
     margin-top: 15px;
     margin-left: 60%;
@@ -97,14 +97,14 @@ body{
 }
 
 
-.guardar:hover {
+#guardar:hover {
     background-color: #fffb00d7;
     color: rgb(0, 0, 0);
 
 }
 
 
-#NombrePro{
+#Nombre_p{
     width: 90%;
     margin-top: 12px;
     height: 70px;

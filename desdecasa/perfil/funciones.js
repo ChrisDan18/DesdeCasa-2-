@@ -35,7 +35,7 @@ const inputNombre_p=document.getElementById('nombre_p');
 const inputTel=document.getElementById('tel');
 const inputCorreo=document.getElementById('correo');
 const inputDireccion=document.getElementById('direccion');
-
+const inputApellido=document.getElementById('apellido');
 
 /**
  * Permite obtener el valor de un parámetro pasado a la página mediante GET
@@ -178,6 +178,7 @@ function Datos_perfil() {
                 inputCorreo.value=datos.correo_e;
                 inputDireccion.value=datos.domicilio;
                 inputNombre_u.value=datos.nombre_u;
+                inputApellido.value=datos.apellido;
 
             },
             //6 - Establecemos una función que se ejecuta en caso de error

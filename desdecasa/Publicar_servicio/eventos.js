@@ -47,7 +47,7 @@ function registrarse() {
                 //let Estado=data.Respuesta.estado;
                 let Datos=data.Respuesta.datos;
                 if ( Datos[0] == true ) {
-                    alert ("Este usuario no está disponible");
+                    alert ("Este servicio no está disponible");
                 } else {
                     enviar_datos_u();
                 }

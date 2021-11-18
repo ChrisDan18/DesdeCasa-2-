@@ -137,3 +137,6 @@ function borrarfotos() {
     labelsubir.style.display="block";
     divimgpreview.style.display="none  ";
 } 
+
+
+

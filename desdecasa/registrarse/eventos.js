@@ -1,9 +1,5 @@
 
 
-
-
-
-
 const inputNombre_u = document.getElementById('Nombre_u');
 const inputCorreo = document.getElementById('Correo_e');
 const inputContraseña = document.getElementById('Contraseña');
@@ -15,6 +11,7 @@ const inputCI = document.getElementById('CI');
 const inputDomicilio = document.getElementById('Domicilio');
 const inputTelefono = document.getElementById('Teléfono');
 
+//FUNCION QUE CONTROLA QUE LOS CAMPO NO ESTEN VACIOS
 
 function inputNoVacio(input) {
     let resultado=false;
@@ -50,6 +47,7 @@ function registrarse() {
                 console.log(data);
                 //let Estado=data.Respuesta.estado;
                 let Datos=data.Respuesta.datos;
+                //CONTROLAN QUE EL USUARIO ESTE DISPONIBLE Y ALERTA EN CASO DE QUE NO.
                 if ( Datos[0] == true ) {
                     alert ("Este usuario no está disponible");
                 } else {

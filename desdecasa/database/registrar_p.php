@@ -7,6 +7,8 @@ include "api.php";
     $info->estado = "";
     $info->datos= "";
 
+// "ISSET" DETERMINA SI UNA VARIABLE ES DECLARADA Y ES DIFERENTE QUE NULO
+
     if ($_POST) {
         if (isset($_POST['modo']) ) {
             

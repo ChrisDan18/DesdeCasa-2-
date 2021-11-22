@@ -3,6 +3,17 @@ create schema desdecasa;
 use desdecasa;
 
 
+/* LOS DATOS DENTRO DE UNA TABLA SE LLAMAN ATRIBUTOS.
+
+   "INT" solo caracteres numericos.
+
+   "VARCHAR" CUALQUIER TIPO DE CARACTÈR.  
+
+   "NOT NULL" DATO QUE NO PUEDE QUEDAR VACIO.
+
+   "PRIMARY KEY" DATO PRINCIPAL (SE USA PARA LLAMAR LA TABLA).
+ */S
+
 CREATE TABLE `usuario` (
   `nombre` varchar(20) unique not null,
   `correo_e` varchar(20) unique not null,

@@ -113,6 +113,9 @@ function enviar_datos_u(){
     );
 }
 
+/* Función para ir de sección 1 a la sección 2. 
+Y que valide las funciones, en conjunto con HTML. */
+
 function AbrirSeccion2(){
     if (inputNoVacio(inputNombre_u)) {
         if (inputNoVacio(inputCorreo)) {
